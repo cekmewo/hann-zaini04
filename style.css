@@ -1,0 +1,321 @@
+ *{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+ }
+ body{
+    background-image: url(images/oribackground.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+ }
+ #header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;                                                                                     
+ }
+ .container{
+   padding: 10 px 10%;
+ }
+
+ nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+ }
+
+ .logo{
+   width: 200px;
+ }
+
+ nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 20px;
+ }
+
+ nav ul li a{
+   color: #fff;
+   text-decoration: none;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-style: italic;
+   font-size: 28px;
+   position: relative;
+ }
+
+ nav ul li a::after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background-color: palevioletred;
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   transition: 0.5s;
+ }
+
+ nav ul li a:hover::after{
+   width: 100%;
+ }
+
+.header-text{
+   font-size: 20px;
+   margin-top: 30px;
+}
+
+.header-text h1{
+   font-size: 60px;
+   margin-top: 20px;
+}
+
+.header-text h1 span{
+   color: purple;
+}
+
+/* ----------biodata---------- */ 
+#biodata{
+    padding: 80px 0;
+    color: black;
+    background-image: url(images/oribackground.png);
+    background-size: cover;
+    background-position: center; 
+}
+.row{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.biodata-col-1{
+    flex-basis: 35%;
+}
+.biodata-col-1 img{
+    border-radius: 5%;
+} 
+.biodata-col-2{
+  flex-basis: 55%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ----------education---------- */ 
+#education{
+  padding: 30px 0;
+  background-image: url(images/oribackground.png);
+  background-size: cover;
+  background-position: center; 
+}
+.education-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.education-list div{
+      background: peachpuff;
+      color: black;
+      padding: 40px;
+      font-size: 18px;
+      font-weight: 300;
+      border-radius: 10px;
+      transition: background 0.5s, transform 0.5s; 
+}
+.education-list div:hover{
+  background: orangered;
+  transform: translateY(-10px);
+}
+
+/* ----------experience---------- */ 
+#experience{
+  padding: 30px 0;
+  background-image: url(images/oribackground.png);
+  background-size: cover;
+  background-position: center; 
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative; 
+  overflow: hidden;
+}
+.work img{
+  width: 100%;
+  border: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgb(104, 4, 104));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 18px;
+  transition: height 0.5s;
+}
+.layer h3{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid orchid;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: orchid;
+}
+
+/* ----------family---------- */
+#family{
+  padding: 30px 0;
+  color: black;
+  background-image: url(images/oribackground.png);
+  background-size: cover;
+  background-position: center;
+}
+.row{
+  flex-basis: 35%;
+}
+.family-left{
+  flex-basis: 55%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.family-right img{
+  border-radius: 5%;
+}
+
+/* ----------gallery---------- */
+#gallery{
+  margin: 0px;
+  padding: 30px 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  background-image: url(images/oribackground.png);
+  background-size: cover;
+  background-position: right;
+}
+.containergallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+.containergallery .heading{
+  width: 50%;
+  padding-bottom: 50px;
+}
+.containergallery .heading h1{
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid white;
+}
+.containergallery .heading h1 span{
+  font-weight: 100;
+}
+.containergallery .box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.containergallery .box .Hannah{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+.containergallery .box .Hannah img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+.containergallery .box .Experience{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+.containergallery .box .Experience img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+.containergallery .box .Family{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+.containergallery .box .Family img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+.containergallery .btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid orchid;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.5s;
+}
+.containergallery .btn a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  transition: background 0.5s;
+}
+.containergallery .btn:hover{
+  background: orchid;
+}
